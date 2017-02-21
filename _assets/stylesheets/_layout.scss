@@ -1,0 +1,9 @@
+.wrapper {
+  @include center(1200px);
+}
+
+.full {
+  @include respond-to(xs) {
+    @include stack();
+  }
+}
