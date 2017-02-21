@@ -1,1 +1,17 @@
 // Footer Styles
+
+
+.footer-container{
+  	@include span(1/1);
+	background:#626c6f;
+	padding:20px 0;
+	text-align:center;
+	color:#fff;
+	
+	i{
+		font-size:40px;
+		color:#fff;
+		padding:0 40px;
+	}
+
+}

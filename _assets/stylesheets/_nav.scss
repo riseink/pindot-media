@@ -1,3 +1,64 @@
+.navigation-container{
+  	@include span(1/1);
+	height:116px;
+	position:relative;
+	z-index: 15;
+	background:#64a837;
+
+	@include respond-to(md) {
+	
+	}
+}
 
 
+.navigation--firstchoice{
+	
+	
+	.logo-container{
+		display:inline-block;
+		margin-top:20px;
+		height:68px;
+		width:320px;
+		margin-left:30px;
+		
+		img{
+			
+			//resizing logo smaller looked bad
+			
+			image-rendering: -moz-crisp-edges;         /* Firefox */
+			image-rendering:   -o-crisp-edges;         /* Opera */
+			image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+			image-rendering: crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+		}
+		
+		@include respond-to(md) {
 
+		}
+	}
+		
+	
+}
+
+
+.cta-container{
+	display:inline-block;
+	margin-top:20px;
+  	@include span(1/2);
+	float:right;
+	text-align:center;
+	
+	
+	h1{
+		color:#fff;
+		font-size:30px;
+		@include zero;
+	}
+	
+	a{
+		display:block;
+		color:#fff;
+		font-size:20px;
+		
+	}
+}
