@@ -1,3 +1,7 @@
+#site{
+    @include span(1/1);
+	
+}
 .wrapper {
   @include center(1200px);
 }
@@ -21,6 +25,8 @@
 
 .half-layout{
     @include span(1/2);
+	display:inline-block;
+	padding:20px;
 	
 }
 
@@ -37,16 +43,108 @@
 	
 }
 
+.format-cta{
+	h1{
+		font-size:55px;
+		@include zero;
+		
+		a{
+			color:$green;
+			
+		}
+	}
+	
+	h5{
+		@include zero;
+	}
+	a{
+		margin-top:20px;
+	}
+}
+
+.pad-footer{
+	padding:20px 50px 20px 50px;
+	display:inline-block;
+}
+
+.pad-wrapper{
+	padding:50px 50px;
+	display:inline-block;
+	
+}
+
 .gray-bg{
 	background:#f7f7f7;
 }
 
 .hero-container{
-	min-height:40vh;
+	min-height:450px;
     background:url(../img/formbg.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:top right;
+	padding:30px;
+}
+
+.hero-copy{
+    @include span(1/2);
+	display:inline-block;
+	background:rgba(0,0,0, .5);
+	padding:40px;
+	
+	ul{
+		list-style:none;
+		@include zero;
+		margin-left:20px;
+	}
+	
+	li{
+		font-size:25px;
+		color:$white;
+		margin:20px;
+		
+	}
+	
+	li:before {    
+	font-family: 'FontAwesome';
+	content: "\f046";
+	margin:0 20px 0 -55px;
+	color: $green;
+	font-size:150%;
+	}
+	
+}
+
+.mobile-cta{
+	display:inline-block;
+	padding:20px;
+	background:$green;
+	color:#fff;
+	border:1px solid black;
+	transition:all .25s;
+	margin-top:20px;
+	
+	i{
+		padding-right:20px;
+	}
+}
+
+.mobile-cta:hover{
+	
+	display:inline-block;
+	padding:20px;
+	background:$white;
+	color:$green;
+	border:1px solid $green;
+	transition:all .25s;
+	
+	i{
+		padding-right:20px;
+		font-size:150%;
+		line-height:50%;
+		padding-right:15px;
+		
+	}
 	
 }
 
@@ -126,7 +224,6 @@ h6{
 p{
    font-size:17px;
    font-family: $font-copy;
-	margin:20px 0;
    
    
    

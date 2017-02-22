@@ -4,7 +4,6 @@
 .footer-container{
   	@include span(1/1);
 	background:#626c6f;
-	padding:20px 0;
 	text-align:center;
 	color:#fff;
 	
@@ -12,6 +11,12 @@
 		font-size:40px;
 		color:#fff;
 		padding:0 40px;
+		transition:all .25s;
 	}
 
+}
+
+.social-links-container i:hover{
+	color:$green;
+	
 }

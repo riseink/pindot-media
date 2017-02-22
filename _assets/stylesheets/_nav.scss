@@ -3,7 +3,7 @@
 	height:116px;
 	position:relative;
 	z-index: 15;
-	background:#64a837;
+	background:$green;
 
 	@include respond-to(md) {
 	
@@ -50,15 +50,21 @@
 	
 	
 	h1{
-		color:#fff;
-		font-size:30px;
+		
+		font-size:40px;
 		@include zero;
+		
+		a{
+			color:#fff;
+			
+		}
 	}
 	
-	a{
+	p{
 		display:block;
 		color:#fff;
 		font-size:20px;
+		@include zero;
 		
 	}
 }
