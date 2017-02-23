@@ -20,7 +20,7 @@
   
  
   @else if $breakpoint == "md" {
-    @media (max-width: 1050px) {
+    @media (max-width: 950px) {
       @content;
     }
   }
@@ -36,7 +36,7 @@ $font-primary: 'Open Sans', sans-serif;
 $font-copy: 'Open Sans', sans-serif;
 
 $green: #64a837;
-$blue: #0086ba;
+$blue: #004c7d;
 $white:#ffffff;
 
 

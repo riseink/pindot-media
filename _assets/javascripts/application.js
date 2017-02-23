@@ -5,6 +5,7 @@ var app = {
 
     initialize: function(){
         this.initFunction();
+		this.initFixedNav();
         
     },
     
@@ -13,7 +14,25 @@ var app = {
     initFunction: function () {
 
 		//do something
-    }
+    },
+	
+    initFixedNav: function () {
+		
+		$(window).scroll(function() {    
+		    var scroll = $(window).scrollTop();
+
+		    if (scroll >= 35) {
+		        $(".navigation-container").addClass("fixed");
+		        $("body").addClass("fixed");
+				
+		    } else {
+		        $(".navigation-container").removeClass("fixed");
+		        $("body").removeClass("fixed");
+				
+		    }
+		});
+
+    },
 
 
     

@@ -1,3 +1,6 @@
+body.fixed{
+	padding-top:100px;
+}
 #site{
     @include span(1/1);
 	
@@ -6,147 +9,6 @@
   @include center(1200px);
 }
 
-.full {
-  @include respond-to(xs) {
-    @include stack();
-  }
-}
-
-
-.half {
-  @include respond-to(xs) {
-    @include col(1/2, $cycle: 2);
-  }
-}
-
-.centered-half {
-    @include span(1/2, $offset: 1/4);
-}
-
-.half-layout{
-    @include span(1/2);
-	display:inline-block;
-	padding:20px;
-	
-}
-
-.span-full{
-    @include span(1/1);
-}
-
-.one-third{
-    @include span(1/3);
-	
-}
-.two-thirds{
-    @include span(2/3);
-	
-}
-
-.format-cta{
-	h1{
-		font-size:55px;
-		@include zero;
-		
-		a{
-			color:$green;
-			
-		}
-	}
-	
-	h5{
-		@include zero;
-	}
-	a{
-		margin-top:20px;
-	}
-}
-
-.pad-footer{
-	padding:20px 50px 20px 50px;
-	display:inline-block;
-}
-
-.pad-wrapper{
-	padding:50px 50px;
-	display:inline-block;
-	
-}
-
-.gray-bg{
-	background:#f7f7f7;
-}
-
-.hero-container{
-	min-height:450px;
-    background:url(../img/formbg.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position:top right;
-	padding:30px;
-}
-
-.hero-copy{
-    @include span(1/2);
-	display:inline-block;
-	background:rgba(0,0,0, .5);
-	padding:40px;
-	
-	ul{
-		list-style:none;
-		@include zero;
-		margin-left:20px;
-	}
-	
-	li{
-		font-size:25px;
-		color:$white;
-		margin:20px;
-		
-	}
-	
-	li:before {    
-	font-family: 'FontAwesome';
-	content: "\f046";
-	margin:0 20px 0 -55px;
-	color: $green;
-	font-size:150%;
-	}
-	
-}
-
-.mobile-cta{
-	display:inline-block;
-	padding:20px;
-	background:$green;
-	color:#fff;
-	border:1px solid black;
-	transition:all .25s;
-	margin-top:20px;
-	
-	i{
-		padding-right:20px;
-	}
-}
-
-.mobile-cta:hover{
-	
-	display:inline-block;
-	padding:20px;
-	background:$white;
-	color:$green;
-	border:1px solid $green;
-	transition:all .25s;
-	
-	i{
-		padding-right:20px;
-		font-size:150%;
-		line-height:50%;
-		padding-right:15px;
-		
-	}
-	
-}
 
 h1{
 	font-family: $font-primary;
@@ -231,3 +93,243 @@ p{
 		font-size:12px;
 	}
 }
+
+.full {
+  @include respond-to(xs) {
+    @include stack();
+  }
+}
+
+
+.half {
+  @include respond-to(xs) {
+    @include col(1/2, $cycle: 2);
+  }
+}
+
+.centered-half {
+    @include span(1/2, $offset: 1/4);
+}
+
+.half-layout{
+    @include span(1/2);
+	display:inline-block;
+	padding:20px;
+	
+}
+
+.span-full{
+    @include span(1/1);
+}
+
+.one-third{
+    @include span(1/3);
+	
+}
+
+.quarters{
+    @include span(1/4);
+	
+	@include respond-to(md) {
+	    @include span(1/2);
+		min-height:800px;
+	}
+	
+	@include respond-to(sm) {
+	    @include span(1/2);
+		min-height:700px;
+	}
+	
+	@include respond-to(xs) {
+	    @include span(1);
+		min-height:0;
+	}
+	
+	.pad-quarters{
+		padding:20px;
+		display:inline-block;
+		
+
+	}
+	
+	h3{
+		font-weight:700;
+		font-size:25px;
+		color:$blue;
+	}
+	
+	.round{
+		font-size:40px;
+		line-height:60px;
+		height:60px;
+		width:60px;
+		border-radius:50%;
+		background:$white;
+		color:$blue;
+		text-align:center;
+	}
+}
+
+.two-thirds{
+    @include span(2/3);
+	
+}
+
+.format-cta{
+	h1{
+		font-size:55px;
+		@include zero;
+		
+		a{
+			color:$green;
+			
+		}
+	}
+	
+	h5{
+		@include zero;
+	}
+	a{
+		margin-top:20px;
+	}
+}
+
+.pad-footer{
+	padding:20px 50px 20px 50px;
+	display:inline-block;
+}
+
+.pad-wrapper{
+	padding:50px 50px;
+	display:inline-block;
+	
+}
+
+.gray-bg{
+	background:#f7f7f7;
+}
+
+.hero-container{
+	min-height:450px;
+    background:url(../img/formbg-narrow.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:top right;
+	padding:30px;
+}
+
+.hero-copy{
+    @include span(1/2);
+	display:inline-block;
+	background:rgba(0,0,0, .5);
+	padding:40px;
+	
+	ul{
+		list-style:none;
+		@include zero;
+		margin-left:20px;
+	}
+	
+	li{
+		font-size:25px;
+		color:$white;
+		margin:20px;
+		
+	}
+	
+	li:before {    
+	font-family: 'FontAwesome';
+	content: "\f046";
+	margin:0 20px 0 -55px;
+	color: $green;
+	font-size:150%;
+	}
+	
+}
+
+.mobile-cta{
+	display:inline-block;
+	padding:20px;
+	background:$green;
+	color:#fff;
+	border:1px solid black;
+	transition:all .25s;
+	margin-top:20px;
+	
+	i{
+		padding-right:20px;
+	}
+}
+
+.mobile-cta:hover{
+	
+	display:inline-block;
+	padding:20px;
+	background:$white;
+	color:$green;
+	border:1px solid $green;
+	transition:all .25s;
+	
+	i{
+		padding-right:20px;
+		font-size:150%;
+		line-height:50%;
+		padding-right:15px;
+		
+	}
+	
+}
+
+.circle-container{
+	padding:20px;
+	display:inline-block;
+    @include span(1);
+	text-align:center;
+	
+	
+}
+
+.circle-item{
+    @include span(1/7);
+	text-align:center;
+	padding:10px;
+	
+	h6{
+		font-weight:700;
+	}
+}
+
+.circle-icon{
+	padding-bottom:100%;
+	border-radius:50%;
+	background-position:center!important;
+	background-repeat:no-repeat!important;
+}
+
+.center-align{
+	text-align:center;
+}
+
+.bg1{
+	background:url(../img/card.png)$green;
+}
+.bg2{
+	background:url(../img/hospital_bil.png)$green;
+}
+.bg3{
+	background:url(../img/store_cc.png)$green;
+}
+.bg4{
+	background:url(../img/personal.png)$green;
+}
+.bg5{
+	background:url(../img/rent.png)$green;
+}
+.bg6{
+	background:url(../img/carpay.png)$green;
+}
+.bg7{
+	background:url(../img/utillity.png)$green;
+}
+
+

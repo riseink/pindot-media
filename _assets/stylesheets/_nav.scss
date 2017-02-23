@@ -8,10 +8,6 @@
 	@include respond-to(md) {
 	
 	}
-}
-
-
-.navigation--firstchoice{
 	
 	
 	.logo-container{
@@ -36,35 +32,117 @@
 
 		}
 	}
+	
+	.cta-container{
+		display:inline-block;
+		margin-top:0px!important;
+	  	@include span(1/2);
+		float:right;
+		text-align:center;
+	
+	
+		h1{
+			font-weight:700;
+			font-size:60px;
+			@include zero;
+			color:#fff;
+		
+		
+			a{
+			
+			}
+		}
+	
+		p{
+			display:block;
+			color:#fff;
+			font-size:20px;
+			@include zero;
+			margin-top:-10px!important;
+			text-transform:uppercase;
+		
+		}
+	}
 		
 	
 }
 
 
-.cta-container{
-	display:inline-block;
-	margin-top:20px;
-  	@include span(1/2);
-	float:right;
-	text-align:center;
-	
-	
-	h1{
+
+
+.navigation-container.fixed{
+  	@include span(1/1);
+	height:80px;
+	position:fixed;
+	top:0;
+	z-index: 15;
+	background:$green;
+
 		
-		font-size:40px;
-		@include zero;
+	.logo-container{
+		display:inline-block;
+		margin-top:20px;
+		height:40px;
+		width:189px;
+		margin-left:30px;
 		
-		a{
-			color:#fff;
+		img{
 			
+			//resizing logo smaller looked bad
+			
+			image-rendering: -moz-crisp-edges;         /* Firefox */
+			image-rendering:   -o-crisp-edges;         /* Opera */
+			image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+			image-rendering: crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+		}
+		
+		@include respond-to(md) {
+
 		}
 	}
 	
-	p{
-		display:block;
-		color:#fff;
-		font-size:20px;
-		@include zero;
+	.cta-container{
+		display:inline-block;
+		margin-top:0px!important;
+	  	@include span(1/2);
+		float:right;
+		text-align:center;
+	
+	
+		h1{
+			font-weight:700;
+			font-size:40px;
+			@include zero;
 		
+			a{
+				color:#fff;
+			
+			}
+		}
+	
+		p{
+			display:block;
+			color:#fff;
+			font-size:20px;
+			@include zero;
+			margin-top:-10px!important;
+			text-transform:uppercase;
+			
+		
+		
+		}
 	}
+		
+	
 }
+
+
+.cta-container:hover{
+	
+	a h1{
+		color:#E4926A!important;
+	}
+
+}
+
