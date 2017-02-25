@@ -5,10 +5,12 @@
 	z-index: 15;
 	background:$green;
 
-	@include respond-to(md) {
-	
+	@include respond-to(sm) {
+		height:80px;
 	}
-	
+	@include respond-to(xs) {
+		height:90px;
+	}	
 	
 	.logo-container{
 		display:inline-block;
@@ -16,6 +18,25 @@
 		height:68px;
 		width:320px;
 		margin-left:30px;
+		
+		@include respond-to(sm) {
+			display:inline-block;
+			margin-top:20px;
+			height:40px;
+			width:189px;
+			margin-left:30px;
+		}
+		
+		@include respond-to(xs) {
+			display:block;
+			margin-top:5px;
+			height:30px;
+			width:142px;
+			margin-left:auto;
+			margin-right:auto;
+			
+		}
+		
 		
 		img{
 			
@@ -28,24 +49,49 @@
 			-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 		}
 		
-		@include respond-to(md) {
-
-		}
 	}
 	
 	.cta-container{
 		display:inline-block;
-		margin-top:0px!important;
 	  	@include span(1/2);
 		float:right;
 		text-align:center;
-	
+		margin-top:0px;
+		
+		 transition: all 0.5s ease;
+		 
+		@include respond-to(xs) {
+		  	@include span(1);
+			text-align:center;
+		}
+		
+		small{
+			line-height:100%;
+			letter-spacing:3px;
+			
+			@include respond-to(xs) {
+				display:none;
+			}
+		}
 	
 		h1{
 			font-weight:700;
 			font-size:60px;
 			@include zero;
 			color:#fff;
+			line-height:80%;
+			
+			
+			@include respond-to(sm) {
+				font-weight:700;
+				font-size:40px;
+				@include zero;
+			}
+			
+			@include respond-to(xs) {
+				font-size:35px;
+				line-height:100%;
+			}
 		
 		
 			a{
@@ -58,8 +104,14 @@
 			color:#fff;
 			font-size:20px;
 			@include zero;
-			margin-top:-10px!important;
 			text-transform:uppercase;
+			margin-top:5px!important;
+			
+			@include respond-to(xs) {
+				font-size:12px;
+				margin-top:0px!important;
+				letter-spacing:3px;
+			}
 		
 		}
 	}
@@ -77,6 +129,10 @@
 	top:0;
 	z-index: 15;
 	background:$green;
+	
+	@include respond-to(xs) {
+		height:90px;
+	}
 
 		
 	.logo-container{
@@ -97,23 +153,43 @@
 			-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 		}
 		
-		@include respond-to(md) {
-
+		@include respond-to(xs) {
+			display:block;
+			margin-top:5px;
+			height:30px;
+			width:142px;
+			margin-left:auto;
+			margin-right:auto;
+			
 		}
 	}
 	
 	.cta-container{
 		display:inline-block;
-		margin-top:0px!important;
+		margin-top:2px!important;
 	  	@include span(1/2);
 		float:right;
 		text-align:center;
-	
+		 transition: all 0.5s ease;
+ 		@include respond-to(xs) {
+ 		  	@include span(1);
+ 			text-align:center;
+ 		}
 	
 		h1{
 			font-weight:700;
 			font-size:40px;
 			@include zero;
+			line-height:100%;
+			letter-spacing:3px;
+			
+			
+			@include respond-to(sm) {
+				font-size:35px;
+				line-height:100%;
+				letter-spacing:1px;
+				
+			}
 		
 			a{
 				color:#fff;
@@ -126,9 +202,16 @@
 			color:#fff;
 			font-size:20px;
 			@include zero;
-			margin-top:-10px!important;
+			margin-top:-2px!important;
 			text-transform:uppercase;
+			font-size:14px;
+			letter-spacing:3px;
 			
+			@include respond-to(xs) {
+				font-size:12px;
+				margin-top:0px!important;
+				letter-spacing:3px;
+			}
 		
 		
 		}
@@ -139,9 +222,9 @@
 
 
 .cta-container:hover{
-	
+	 transition: all 0.5s ease;
 	a h1{
-		color:#E4926A!important;
+		color:$blue!important;
 	}
 
 }
