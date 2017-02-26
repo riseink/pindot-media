@@ -216,10 +216,7 @@ p{
 	}
 }
 
-.pad-footer{
-	padding:20px 50px 20px 50px;
-	display:inline-block;
-}
+
 
 .pad-wrapper{
 	padding:50px 50px;
@@ -267,6 +264,10 @@ p{
 	display:inline-block;
 	background:rgba(0,0,0, .5);
 	padding:40px;
+	@include respond-to(md) {
+	    @include span(2/3);
+		padding:20px;
+	}
 	
 	@include respond-to(sm) {
 	    @include span(2/3);
@@ -370,6 +371,8 @@ form{
 	
 	h6{
 		font-weight:700;
+		min-height:30px;
+		
 	}
 }
 

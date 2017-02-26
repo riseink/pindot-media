@@ -7,18 +7,36 @@
 	text-align:center;
 	color:#fff;
 	
+	@include respond-to(xs) {
+	}
+	
 	i{
 		font-size:40px;
 		color:#fff;
 		padding:0 40px;
+		@include respond-to(sm) {
+			padding:20px;
+		}
 		transition:all .25s;
 	}
 
 }
 .social-links-container{
 	padding-top:40px;
+	
+	@include respond-to(sm) {
+		padding-top:20px;
+	}
 }
 .social-links-container i:hover{
 	color:$green;
 	
+}
+
+.pad-footer{
+	padding:20px 50px 20px 50px;
+	display:inline-block;
+	@include respond-to(sm) {
+		padding:20px;
+	}
 }

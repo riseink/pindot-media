@@ -57,8 +57,11 @@
 		float:right;
 		text-align:center;
 		margin-top:0px;
+	 	transition: all 0.5s ease;
 		
-		 transition: all 0.5s ease;
+		@include respond-to(sm) {
+			margin-top:2px!important;
+		}
 		 
 		@include respond-to(xs) {
 		  	@include span(1);
@@ -81,12 +84,13 @@
 			color:#fff;
 			line-height:80%;
 			
-			
 			@include respond-to(sm) {
-				font-weight:700;
-				font-size:40px;
-				@include zero;
+				font-size:35px;
+				line-height:100%;
+				letter-spacing:1px;
+				
 			}
+			
 			
 			@include respond-to(xs) {
 				font-size:35px;
@@ -106,6 +110,20 @@
 			@include zero;
 			text-transform:uppercase;
 			margin-top:5px!important;
+			
+			@include respond-to(sm) {
+				display:block;
+				color:$white;
+				font-size:20px;
+				@include zero;
+				margin-top:-2px!important;
+				text-transform:uppercase;
+				font-size:14px;
+				letter-spacing:3px;
+
+		
+		
+			}
 			
 			@include respond-to(xs) {
 				font-size:12px;
